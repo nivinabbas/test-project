@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>RECIPES</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  </head>
+
+  <body>
+    <div id="inputs">
+      <input
+        type="text"
+        placeholder="please enter name of a team"
+        class="inputRecipeName"
+      />
+      <button class="getRecipeName">Search!</button>
+    </div>
+    <div class="ingredientData"></div>
+
+    <div class="recipeCard"></div>
+
+    <script id="recipes-template" type="text/x-handlebars-template">
+      <div class='ingredientData'>
+        {{#each results}}
+
+          <div class='recipeCard'>
+            <p>{{ingredients}}</p>
+            <a href='{{href}}'><h4>{{title}}</h4></a>
+            <div class='photoCard'>
+              <button class='imageButton' id='{{ingredients}}'>
+                <img src='{{thumbnail}}' class='photoCard' alt='NO PHOTO' />
+              </button>
+            </div>
+          </div>
+
+        {{/each}}
+      </div>
+    </script>
+
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script src="/Renderer.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>
