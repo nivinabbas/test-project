@@ -1,0 +1,39 @@
+#header {
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  height: 43px;
+}
+
+.inputRecipeName {
+  width: 90%;
+}
+
+.ingredientData {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  display: grid;
+  grid-gap: 10px;
+
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.recipeCard {
+  display: grid;
+  top: 8px;
+  background-color: rgb(237, 209, 248);
+  text-align: center;
+  /* height: 520px;
+    width: 320px; */
+  align-content: center;
+  border-radius: 16px;
+}
+
+.photoCard {
+  display: inline-block;
+  margin-left: 100px;
+  width: 200px;
+  height: 200px;
+}
